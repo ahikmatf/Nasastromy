@@ -15,6 +15,13 @@
 		E95A36E82BF1E5710010ACE1 /* NasastromyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A36E72BF1E5710010ACE1 /* NasastromyTests.swift */; };
 		E95A36F22BF1E5710010ACE1 /* NasastromyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A36F12BF1E5710010ACE1 /* NasastromyUITests.swift */; };
 		E95A36F42BF1E5710010ACE1 /* NasastromyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A36F32BF1E5710010ACE1 /* NasastromyUITestsLaunchTests.swift */; };
+		E95A37052BF1E9E30010ACE1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37042BF1E9E30010ACE1 /* Router.swift */; };
+		E95A37072BF20A5D0010ACE1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37062BF20A5D0010ACE1 /* FeedViewController.swift */; };
+		E95A37092BF20A650010ACE1 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37082BF20A650010ACE1 /* FeedPresenter.swift */; };
+		E95A370C2BF20D340010ACE1 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A370B2BF20D340010ACE1 /* FeedService.swift */; };
+		E95A370F2BF214250010ACE1 /* AstroPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A370E2BF214250010ACE1 /* AstroPod.swift */; };
+		E95A37112BF21B210010ACE1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37102BF21B210010ACE1 /* Endpoint.swift */; };
+		E95A37152BF237F50010ACE1 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37142BF237F50010ACE1 /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		E95A36ED2BF1E5710010ACE1 /* NasastromyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasastromyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E95A36F12BF1E5710010ACE1 /* NasastromyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasastromyUITests.swift; sourceTree = "<group>"; };
 		E95A36F32BF1E5710010ACE1 /* NasastromyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasastromyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E95A37042BF1E9E30010ACE1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E95A37062BF20A5D0010ACE1 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		E95A37082BF20A650010ACE1 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		E95A370B2BF20D340010ACE1 /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+		E95A370E2BF214250010ACE1 /* AstroPod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPod.swift; sourceTree = "<group>"; };
+		E95A37102BF21B210010ACE1 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		E95A37142BF237F50010ACE1 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +111,10 @@
 		E95A36CF2BF1E56D0010ACE1 /* Nasastromy */ = {
 			isa = PBXGroup;
 			children = (
-				E95A36D02BF1E56D0010ACE1 /* AppDelegate.swift */,
-				E95A36D22BF1E56D0010ACE1 /* SceneDelegate.swift */,
+				E95A37002BF1E9940010ACE1 /* App */,
+				E95A37012BF1E99B0010ACE1 /* Modules */,
+				E95A370A2BF20CE90010ACE1 /* Network */,
+				E95A370D2BF214150010ACE1 /* Model */,
 				E95A36D42BF1E56D0010ACE1 /* ViewController.swift */,
 				E95A36D92BF1E5700010ACE1 /* Assets.xcassets */,
 				E95A36DB2BF1E5700010ACE1 /* LaunchScreen.storyboard */,
@@ -122,6 +138,59 @@
 				E95A36F32BF1E5710010ACE1 /* NasastromyUITestsLaunchTests.swift */,
 			);
 			path = NasastromyUITests;
+			sourceTree = "<group>";
+		};
+		E95A37002BF1E9940010ACE1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E95A36D02BF1E56D0010ACE1 /* AppDelegate.swift */,
+				E95A36D22BF1E56D0010ACE1 /* SceneDelegate.swift */,
+				E95A37042BF1E9E30010ACE1 /* Router.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E95A37012BF1E99B0010ACE1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E95A37022BF1E9B70010ACE1 /* Feed */,
+				E95A37032BF1E9C40010ACE1 /* Detail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E95A37022BF1E9B70010ACE1 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				E95A37062BF20A5D0010ACE1 /* FeedViewController.swift */,
+				E95A37082BF20A650010ACE1 /* FeedPresenter.swift */,
+				E95A37142BF237F50010ACE1 /* FeedCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		E95A37032BF1E9C40010ACE1 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E95A370A2BF20CE90010ACE1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E95A370B2BF20D340010ACE1 /* FeedService.swift */,
+				E95A37102BF21B210010ACE1 /* Endpoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E95A370D2BF214150010ACE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E95A370E2BF214250010ACE1 /* AstroPod.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +323,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95A37052BF1E9E30010ACE1 /* Router.swift in Sources */,
+				E95A37112BF21B210010ACE1 /* Endpoint.swift in Sources */,
 				E95A36D52BF1E56D0010ACE1 /* ViewController.swift in Sources */,
+				E95A370C2BF20D340010ACE1 /* FeedService.swift in Sources */,
+				E95A37152BF237F50010ACE1 /* FeedCell.swift in Sources */,
+				E95A37072BF20A5D0010ACE1 /* FeedViewController.swift in Sources */,
 				E95A36D12BF1E56D0010ACE1 /* AppDelegate.swift in Sources */,
+				E95A37092BF20A650010ACE1 /* FeedPresenter.swift in Sources */,
+				E95A370F2BF214250010ACE1 /* AstroPod.swift in Sources */,
 				E95A36D32BF1E56D0010ACE1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
