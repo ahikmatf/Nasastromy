@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FeedViewable {
-    
+    func reloadTableView()
 }
 
 final class FeedViewController: UIViewController, FeedViewable {
@@ -16,6 +16,8 @@ final class FeedViewController: UIViewController, FeedViewable {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.dataSource = self
         $0.delegate = self
+        $0.register(FeedCell.self, forCellReuseIdentifier: FeedCell.description())
+        $0.separatorStyle = .none
         return $0
     }(UITableView())
     
@@ -38,6 +40,12 @@ final class FeedViewController: UIViewController, FeedViewable {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+    
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }
 
 extension FeedViewController: UITableViewDataSource {
@@ -46,7 +54,10 @@ extension FeedViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedCell.description(), for: indexPath) as? FeedCell, let model = presenter?.feedCellModel(at: indexPath.row) else { return UITableViewCell() }
+        cell.configure(with: model)
+        cell.selectionStyle = .none
+        return cell
     }
 }
 

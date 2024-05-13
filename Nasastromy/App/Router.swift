@@ -9,6 +9,7 @@ import UIKit
 
 protocol Routable {
     func showRootViewController() -> UIViewController
+    func showGenericErrorAlert()
 }
 
 final class Router: Routable {
@@ -27,5 +28,14 @@ final class Router: Routable {
         
         navigationController.setViewControllers([viewController], animated: false)
         return navigationController
+    }
+    
+    func showGenericErrorAlert() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error", message: "Something went wrong", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
+            self.navigationController.present(alert, animated: true)
+        }
     }
 }

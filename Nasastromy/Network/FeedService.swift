@@ -7,8 +7,13 @@
 
 import Foundation
 
+enum APIError: Error {
+    case internalServiceError
+    case endAndStartDate
+}
+
 protocol FeedServiceable {
-    func fetchAstroPod(startDate: String, endDate: String) async -> [AstroPod]
+    func fetchAstroPod(startDate: String, endDate: String) async -> Result<[AstroPod], Error>
 }
 
 final class FeedService: FeedServiceable {
@@ -18,7 +23,7 @@ final class FeedService: FeedServiceable {
         self.urlSession = urlSession
     }
     
-    func fetchAstroPod(startDate: String, endDate: String) async -> [AstroPod] {
+    func fetchAstroPod(startDate: String, endDate: String) async -> Result<[AstroPod], Error> {
         let urlRequest = Endpoint.apod(startDate: startDate, endDate: endDate).urlRequest
         
         do {
@@ -27,9 +32,9 @@ final class FeedService: FeedServiceable {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let astropods = try decoder.decode([AstroPod].self, from: data)
-            return astropods
+            return .success(astropods)
         } catch {
-            return []
+            return .failure(error)
         }
     }
 }
