@@ -21,14 +21,21 @@ final class FeedViewController: UIViewController, FeedViewable {
         return $0
     }(UITableView())
     
-    var presenter: FeedPresenter?
+    private let presenter: FeedPresentable
+    
+    init(presenter: FeedPresentable) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubview()
-        Task {
-            await presenter?.fetchAstroPod(startDate: Date.sevenDaysAgo, endDate: Date.today)
-        }
+        loadData()
     }
     
     private func setupSubview() {
@@ -42,6 +49,13 @@ final class FeedViewController: UIViewController, FeedViewable {
         ])
     }
     
+    func loadData() {
+        Task {
+            let _ = await presenter.fetchAstroPod(startDate: Date.sevenDaysAgo, endDate: Date.today)
+            reloadTableView()
+        }
+    }
+    
     func reloadTableView() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -51,11 +65,12 @@ final class FeedViewController: UIViewController, FeedViewable {
 
 extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter?.astroPods.count ?? 0
+        return presenter.astroPods.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedCell.description(), for: indexPath) as? FeedCell, let model = presenter?.feedCellModel(at: indexPath.row) else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedCell.description(), for: indexPath) as? FeedCell else { return UITableViewCell() }
+        let model = presenter.feedCellModel(at: indexPath.row) 
         cell.configure(with: model)
         cell.selectionStyle = .none
         return cell
@@ -64,6 +79,6 @@ extension FeedViewController: UITableViewDataSource {
 
 extension FeedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.didSelectRow(at: indexPath.row)
+        presenter.didSelectRow(at: indexPath.row)
     }
 }

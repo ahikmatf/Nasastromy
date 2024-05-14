@@ -18,7 +18,6 @@ protocol FeedPresentable {
 final class FeedPresenter: FeedPresentable {
     private let router: Routable
     private let feedService: FeedServiceable
-    var view: FeedViewable?
     
     var astroPods = [AstroPod]()
     
@@ -35,8 +34,6 @@ final class FeedPresenter: FeedPresentable {
         case .failure:
             self.router.showGenericErrorAlert()
         }
-        
-        view?.reloadTableView()
     }
     
     func feedCellModel(at index: Int) -> FeedCellModel {

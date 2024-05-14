@@ -33,9 +33,9 @@ final class DetailViewController: UIViewController, DetailViewable {
         return $0
     }(UITextView())
     
-    private let presenter: DetailPresenter
+    private let presenter: DetailPresentable
     
-    init(presenter: DetailPresenter) {
+    init(presenter: DetailPresentable) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }

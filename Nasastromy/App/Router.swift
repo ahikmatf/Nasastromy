@@ -25,9 +25,7 @@ final class Router: Routable {
     func showRootViewController() -> UIViewController {
         let feedService = FeedService(urlSession: URLSession.shared)
         let presenter = FeedPresenter(router: self, feedService: feedService)
-        let viewController = FeedViewController()
-        viewController.presenter = presenter
-        presenter.view = viewController
+        let viewController = FeedViewController(presenter: presenter)
         
         navigationController.setViewControllers([viewController], animated: false)
         return navigationController
