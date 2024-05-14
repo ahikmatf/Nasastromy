@@ -15,7 +15,7 @@ extension UIImageView {
                 return
             }
 
-            if let image = ImageCache.load(key: NSString(string: checkedUrlString)) as? UIImage {
+            if let image = ImageCache().load(key: NSString(string: checkedUrlString)) as? UIImage {
                 DispatchQueue.main.async {
                     self.image = image
                 }
@@ -31,7 +31,7 @@ extension UIImageView {
                 return
             }
 
-            ImageCache.store(key: NSString(string: checkedUrlString), data: image)
+            ImageCache().store(key: NSString(string: checkedUrlString), data: image)
             DispatchQueue.main.async {
                 self.image = image
             }

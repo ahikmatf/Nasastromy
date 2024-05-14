@@ -38,6 +38,7 @@
 		E95A37402BF395860010ACE1 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A373F2BF395860010ACE1 /* URLProtocolMock.swift */; };
 		E95A37422BF3A6300010ACE1 /* AstroPodMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37412BF3A6300010ACE1 /* AstroPodMock.swift */; };
 		E95A37452BF3B5470010ACE1 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37442BF3B5470010ACE1 /* ImageCache.swift */; };
+		E95A37482BF3C4F70010ACE1 /* ImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37472BF3C4F70010ACE1 /* ImageCacheTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		E95A373F2BF395860010ACE1 /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
 		E95A37412BF3A6300010ACE1 /* AstroPodMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPodMock.swift; sourceTree = "<group>"; };
 		E95A37442BF3B5470010ACE1 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		E95A37472BF3C4F70010ACE1 /* ImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				E95A37332BF388B80010ACE1 /* App */,
 				E95A37212BF373000010ACE1 /* Modules */,
 				E95A373C2BF390BC0010ACE1 /* Network */,
+				E95A37462BF3C4E30010ACE1 /* Helper */,
 			);
 			path = NasastromyTests;
 			sourceTree = "<group>";
@@ -303,6 +306,14 @@
 			isa = PBXGroup;
 			children = (
 				E95A37442BF3B5470010ACE1 /* ImageCache.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E95A37462BF3C4E30010ACE1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E95A37472BF3C4F70010ACE1 /* ImageCacheTests.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -462,6 +473,7 @@
 				E95A37282BF373BD0010ACE1 /* RouterMock.swift in Sources */,
 				E95A37302BF386610010ACE1 /* DetailPresenterTest.swift in Sources */,
 				E95A372E2BF3811D0010ACE1 /* FeedViewMock.swift in Sources */,
+				E95A37482BF3C4F70010ACE1 /* ImageCacheTests.swift in Sources */,
 				E95A37422BF3A6300010ACE1 /* AstroPodMock.swift in Sources */,
 				E95A373B2BF38F180010ACE1 /* DispatchQueueMock.swift in Sources */,
 				E95A37322BF386DE0010ACE1 /* DetailViewMock.swift in Sources */,
