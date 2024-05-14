@@ -18,13 +18,14 @@ final class FeedCell: UITableViewCell {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.numberOfLines = 2
         $0.textAlignment = .center
-//        $0.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        $0.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         return $0
     }(UILabel())
     
     private let astroImageView: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.backgroundColor = .red
+        $0.contentMode = .scaleAspectFill
+        $0.clipsToBounds = true
         return $0
     }(UIImageView())
     
@@ -32,7 +33,7 @@ final class FeedCell: UITableViewCell {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.numberOfLines = 1
         $0.textAlignment = .center
-//        $0.font = UIFont.systemFont(ofSize: 10, weight: .light)
+        $0.font = UIFont.systemFont(ofSize: 10, weight: .light)
         return $0
     }(UILabel())
     
@@ -41,6 +42,11 @@ final class FeedCell: UITableViewCell {
         $0.backgroundColor = .gray
         return $0
     }(UIView())
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        astroImageView.image = nil
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -93,7 +99,7 @@ final class FeedCell: UITableViewCell {
     
     func configure(with model: FeedCellModel) {
         titleLabel.text = model.title
-        astroImageView.backgroundColor = .red
+        astroImageView.load(from: model.imageUrl)
         dateLabel.text = model.date
     }
 }

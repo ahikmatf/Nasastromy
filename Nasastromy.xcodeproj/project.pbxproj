@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E95A36D12BF1E56D0010ACE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A36D02BF1E56D0010ACE1 /* AppDelegate.swift */; };
 		E95A36D32BF1E56D0010ACE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A36D22BF1E56D0010ACE1 /* SceneDelegate.swift */; };
-		E95A36D52BF1E56D0010ACE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A36D42BF1E56D0010ACE1 /* ViewController.swift */; };
 		E95A36DA2BF1E5700010ACE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95A36D92BF1E5700010ACE1 /* Assets.xcassets */; };
 		E95A36DD2BF1E5700010ACE1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E95A36DC2BF1E5700010ACE1 /* Base */; };
 		E95A36E82BF1E5710010ACE1 /* NasastromyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A36E72BF1E5710010ACE1 /* NasastromyTests.swift */; };
@@ -22,6 +21,8 @@
 		E95A370F2BF214250010ACE1 /* AstroPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A370E2BF214250010ACE1 /* AstroPod.swift */; };
 		E95A37112BF21B210010ACE1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37102BF21B210010ACE1 /* Endpoint.swift */; };
 		E95A37152BF237F50010ACE1 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37142BF237F50010ACE1 /* FeedCell.swift */; };
+		E95A371A2BF289E40010ACE1 /* Date+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37192BF289E40010ACE1 /* Date+extensions.swift */; };
+		E95A371C2BF28A020010ACE1 /* UIImageView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A371B2BF28A020010ACE1 /* UIImageView+extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 		E95A36CD2BF1E56D0010ACE1 /* Nasastromy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nasastromy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E95A36D02BF1E56D0010ACE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E95A36D22BF1E56D0010ACE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E95A36D42BF1E56D0010ACE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E95A36D92BF1E5700010ACE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E95A36DC2BF1E5700010ACE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E95A36DE2BF1E5700010ACE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +61,8 @@
 		E95A370E2BF214250010ACE1 /* AstroPod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPod.swift; sourceTree = "<group>"; };
 		E95A37102BF21B210010ACE1 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		E95A37142BF237F50010ACE1 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		E95A37192BF289E40010ACE1 /* Date+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extensions.swift"; sourceTree = "<group>"; };
+		E95A371B2BF28A020010ACE1 /* UIImageView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +117,7 @@
 				E95A37012BF1E99B0010ACE1 /* Modules */,
 				E95A370A2BF20CE90010ACE1 /* Network */,
 				E95A370D2BF214150010ACE1 /* Model */,
-				E95A36D42BF1E56D0010ACE1 /* ViewController.swift */,
+				E95A37182BF289AF0010ACE1 /* Extensions */,
 				E95A36D92BF1E5700010ACE1 /* Assets.xcassets */,
 				E95A36DB2BF1E5700010ACE1 /* LaunchScreen.storyboard */,
 				E95A36DE2BF1E5700010ACE1 /* Info.plist */,
@@ -191,6 +193,15 @@
 				E95A370E2BF214250010ACE1 /* AstroPod.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E95A37182BF289AF0010ACE1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E95A37192BF289E40010ACE1 /* Date+extensions.swift */,
+				E95A371B2BF28A020010ACE1 /* UIImageView+extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,13 +336,14 @@
 			files = (
 				E95A37052BF1E9E30010ACE1 /* Router.swift in Sources */,
 				E95A37112BF21B210010ACE1 /* Endpoint.swift in Sources */,
-				E95A36D52BF1E56D0010ACE1 /* ViewController.swift in Sources */,
 				E95A370C2BF20D340010ACE1 /* FeedService.swift in Sources */,
 				E95A37152BF237F50010ACE1 /* FeedCell.swift in Sources */,
 				E95A37072BF20A5D0010ACE1 /* FeedViewController.swift in Sources */,
+				E95A371A2BF289E40010ACE1 /* Date+extensions.swift in Sources */,
 				E95A36D12BF1E56D0010ACE1 /* AppDelegate.swift in Sources */,
 				E95A37092BF20A650010ACE1 /* FeedPresenter.swift in Sources */,
 				E95A370F2BF214250010ACE1 /* AstroPod.swift in Sources */,
+				E95A371C2BF28A020010ACE1 /* UIImageView+extensions.swift in Sources */,
 				E95A36D32BF1E56D0010ACE1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,7 +27,7 @@ final class FeedPresenter: FeedPresentable {
     }
     
     func fetchAstroPod() async {
-        let result = await feedService.fetchAstroPod(startDate: Date.today, endDate: Date.sevenDaysAgo)
+        let result = await feedService.fetchAstroPod(startDate: Date.sevenDaysAgo, endDate: Date.today)
         switch result {
         case .success(let astropods):
             self.astroPods = astropods
@@ -41,26 +41,5 @@ final class FeedPresenter: FeedPresentable {
     func feedCellModel(at index: Int) -> FeedCellModel {
         let astroPod = astroPods[index]
         return FeedCellModel(title: astroPod.title, imageUrl: astroPod.url, date: astroPod.date)
-    }
-}
-
-private extension Date {
-    static var today: String {
-        let df = DateFormatter()
-        df.dateFormat = .localizedStringWithFormat("yyyy-MM-dd")
-        df.timeZone = TimeZone(abbreviation: "GMT")
-        
-        let today = Date()
-        return df.string(from: today)
-    }
-    
-    static var sevenDaysAgo: String {
-        let df = DateFormatter()
-        df.dateFormat = .localizedStringWithFormat("yyyy-MM-dd")
-        df.timeZone = TimeZone(abbreviation: "GMT")
-        
-        let today = Date()
-        let sevenDaysAgo = Calendar.current.date(byAdding: .day, value: -6, to: today)!
-        return df.string(from: sevenDaysAgo)
     }
 }
