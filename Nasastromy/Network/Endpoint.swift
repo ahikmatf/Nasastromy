@@ -19,6 +19,8 @@ enum Endpoint {
     
     var urlRequest: URLRequest {
         let url = URL(string: urlString)!
-        return URLRequest(url: url)
+        var urlRequest = URLRequest(url: url)
+        urlRequest.cachePolicy = .returnCacheDataElseLoad
+        return urlRequest
     }
 }
