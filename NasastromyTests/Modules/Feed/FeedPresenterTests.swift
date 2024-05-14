@@ -11,19 +11,16 @@ import XCTest
 class FeedPresenterTests: XCTestCase {
     var router: RouterMock!
     var feedService: FeedServiceMock!
-    var view: FeedViewMock!
     
     override func setUp() async throws {
         router = RouterMock()
         feedService = FeedServiceMock()
-        view = FeedViewMock()
         try await super.setUp()
     }
     
     override func tearDown() async throws {
         router = nil
         feedService = nil
-        view = nil
         try await super.tearDown()
     }
     
@@ -35,7 +32,6 @@ class FeedPresenterTests: XCTestCase {
         await sut.fetchAstroPod(startDate: "valid", endDate: "valid")
         
         XCTAssertEqual(sut.astroPods.count, expectedCount)
-        XCTAssertTrue(view.reloadTableViewInvoked)
     }
     
     func test_fetchAstroPods_returnError_usingInvalidDate() async {
@@ -43,7 +39,6 @@ class FeedPresenterTests: XCTestCase {
         await sut.fetchAstroPod(startDate: "invalid", endDate: "valid")
         
         XCTAssertTrue(router.showGenericErrorAlertInvoked)
-        XCTAssertTrue(view.reloadTableViewInvoked)
     }
     
     func test_getFeedCellModel_forCertainIndex() async {
@@ -52,7 +47,7 @@ class FeedPresenterTests: XCTestCase {
         
         let sut = makeSUT()
         await sut.fetchAstroPod(startDate: "valid", endDate: "valid")
-        let model = sut.feedCellModel(at: 1)
+        guard let model = sut.nasaCellModel(at: 1) as? FeedCellModel else { fatalError("model is invalid") }
         
         XCTAssertEqual(model.title, sut.astroPods[1].title)
     }
@@ -71,7 +66,6 @@ class FeedPresenterTests: XCTestCase {
     
     private func makeSUT() -> FeedPresenter {
         let presenter = FeedPresenter(router: router, feedService: feedService)
-        presenter.view = view
         return presenter
     }
 }

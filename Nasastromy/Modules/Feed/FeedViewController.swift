@@ -16,7 +16,7 @@ final class FeedViewController: UIViewController, FeedViewable {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.dataSource = self
         $0.delegate = self
-        $0.register(FeedCell.self, forCellReuseIdentifier: FeedCell.description())
+        $0.register(FeedCell.self, forCellReuseIdentifier: NasaCellType.astroPod.rawValue)
         $0.separatorStyle = .none
         return $0
     }(UITableView())
@@ -69,11 +69,13 @@ extension FeedViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedCell.description(), for: indexPath) as? FeedCell else { return UITableViewCell() }
-        let model = presenter.feedCellModel(at: indexPath.row) 
+        let model = presenter.nasaCellModel(at: indexPath.row)
+        let identifier = model.type.rawValue
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? NasaCell else { return UITableViewCell() }
+        
         cell.configure(with: model)
-        cell.selectionStyle = .none
-        return cell
+        (cell as! UITableViewCell).selectionStyle = .none
+        return cell as! UITableViewCell
     }
 }
 

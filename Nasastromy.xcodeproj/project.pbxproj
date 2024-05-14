@@ -27,7 +27,6 @@
 		E95A37252BF373350010ACE1 /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37242BF373350010ACE1 /* FeedPresenterTests.swift */; };
 		E95A37282BF373BD0010ACE1 /* RouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37272BF373BD0010ACE1 /* RouterMock.swift */; };
 		E95A372A2BF374440010ACE1 /* FeedServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37292BF374440010ACE1 /* FeedServiceMock.swift */; };
-		E95A372E2BF3811D0010ACE1 /* FeedViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A372D2BF3811D0010ACE1 /* FeedViewMock.swift */; };
 		E95A37302BF386610010ACE1 /* DetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A372F2BF386610010ACE1 /* DetailPresenterTest.swift */; };
 		E95A37322BF386DE0010ACE1 /* DetailViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37312BF386DE0010ACE1 /* DetailViewMock.swift */; };
 		E95A37352BF388CC0010ACE1 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37342BF388CC0010ACE1 /* RouterTests.swift */; };
@@ -86,7 +85,6 @@
 		E95A37272BF373BD0010ACE1 /* RouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMock.swift; sourceTree = "<group>"; };
 		E95A37292BF374440010ACE1 /* FeedServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedServiceMock.swift; sourceTree = "<group>"; };
 		E95A372C2BF37BF80010ACE1 /* Nasastromy.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Nasastromy.xctestplan; path = ../Nasastromy.xctestplan; sourceTree = "<group>"; };
-		E95A372D2BF3811D0010ACE1 /* FeedViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewMock.swift; sourceTree = "<group>"; };
 		E95A372F2BF386610010ACE1 /* DetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTest.swift; sourceTree = "<group>"; };
 		E95A37312BF386DE0010ACE1 /* DetailViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewMock.swift; sourceTree = "<group>"; };
 		E95A37342BF388CC0010ACE1 /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
@@ -281,7 +279,6 @@
 			children = (
 				E95A37272BF373BD0010ACE1 /* RouterMock.swift */,
 				E95A37292BF374440010ACE1 /* FeedServiceMock.swift */,
-				E95A372D2BF3811D0010ACE1 /* FeedViewMock.swift */,
 				E95A37312BF386DE0010ACE1 /* DetailViewMock.swift */,
 				E95A37362BF3892B0010ACE1 /* NavigationControllerMock.swift */,
 				E95A373A2BF38F180010ACE1 /* DispatchQueueMock.swift */,
@@ -487,7 +484,6 @@
 			files = (
 				E95A37282BF373BD0010ACE1 /* RouterMock.swift in Sources */,
 				E95A37302BF386610010ACE1 /* DetailPresenterTest.swift in Sources */,
-				E95A372E2BF3811D0010ACE1 /* FeedViewMock.swift in Sources */,
 				E95A374B2BF3C7710010ACE1 /* DateExtensionTests.swift in Sources */,
 				E95A37482BF3C4F70010ACE1 /* ImageCacheTests.swift in Sources */,
 				E95A37422BF3A6300010ACE1 /* AstroPodMock.swift in Sources */,

@@ -7,13 +7,27 @@
 
 import UIKit
 
-struct FeedCellModel {
+enum NasaCellType: String {
+    case astroPod
+}
+
+protocol NasaCellModel {
+    var type: NasaCellType { get }
+}
+
+protocol NasaCell {
+    func configure(with model: NasaCellModel)
+}
+
+struct FeedCellModel: NasaCellModel {
+    var type: NasaCellType { return .astroPod }
+    
     let title: String
     let imageUrl: String
     let date: String
 }
 
-final class FeedCell: UITableViewCell {
+final class FeedCell: UITableViewCell, NasaCell {
     private let titleLabel: UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.numberOfLines = 2
@@ -97,7 +111,8 @@ final class FeedCell: UITableViewCell {
         NSLayoutConstraint.activate(constraints)
     }
     
-    func configure(with model: FeedCellModel) {
+    func configure(with model: NasaCellModel) {
+        guard let model = model as? FeedCellModel else { return }
         titleLabel.text = model.title
         astroImageView.load(from: model.imageUrl)
         dateLabel.text = model.date

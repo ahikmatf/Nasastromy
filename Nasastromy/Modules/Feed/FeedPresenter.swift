@@ -11,7 +11,7 @@ protocol FeedPresentable {
     var astroPods: [AstroPod] { get }
     
     func fetchAstroPod(startDate: String, endDate: String) async
-    func feedCellModel(at index: Int) -> FeedCellModel
+    func nasaCellModel(at index: Int) -> NasaCellModel
     func didSelectRow(at index: Int)
 }
 
@@ -36,7 +36,7 @@ final class FeedPresenter: FeedPresentable {
         }
     }
     
-    func feedCellModel(at index: Int) -> FeedCellModel {
+    func nasaCellModel(at index: Int) -> NasaCellModel {
         let astroPod = astroPods[index]
         return FeedCellModel(title: astroPod.title, imageUrl: astroPod.url, date: astroPod.date)
     }
