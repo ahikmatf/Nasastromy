@@ -37,6 +37,7 @@
 		E95A373E2BF390DD0010ACE1 /* FeedServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A373D2BF390DD0010ACE1 /* FeedServiceTests.swift */; };
 		E95A37402BF395860010ACE1 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A373F2BF395860010ACE1 /* URLProtocolMock.swift */; };
 		E95A37422BF3A6300010ACE1 /* AstroPodMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37412BF3A6300010ACE1 /* AstroPodMock.swift */; };
+		E95A37452BF3B5470010ACE1 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37442BF3B5470010ACE1 /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		E95A373D2BF390DD0010ACE1 /* FeedServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedServiceTests.swift; sourceTree = "<group>"; };
 		E95A373F2BF395860010ACE1 /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
 		E95A37412BF3A6300010ACE1 /* AstroPodMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPodMock.swift; sourceTree = "<group>"; };
+		E95A37442BF3B5470010ACE1 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				E95A370A2BF20CE90010ACE1 /* Network */,
 				E95A370D2BF214150010ACE1 /* Model */,
 				E95A37182BF289AF0010ACE1 /* Extensions */,
+				E95A37432BF3B51B0010ACE1 /* Helper */,
 				E95A36D92BF1E5700010ACE1 /* Assets.xcassets */,
 				E95A36DB2BF1E5700010ACE1 /* LaunchScreen.storyboard */,
 				E95A36DE2BF1E5700010ACE1 /* Info.plist */,
@@ -296,6 +299,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		E95A37432BF3B51B0010ACE1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E95A37442BF3B5470010ACE1 /* ImageCache.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -426,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95A37452BF3B5470010ACE1 /* ImageCache.swift in Sources */,
 				E95A37052BF1E9E30010ACE1 /* Router.swift in Sources */,
 				E95A37112BF21B210010ACE1 /* Endpoint.swift in Sources */,
 				E95A370C2BF20D340010ACE1 /* FeedService.swift in Sources */,

@@ -15,6 +15,14 @@ extension UIImageView {
                 return
             }
 
+            if let image = ImageCache.load(key: NSString(string: checkedUrlString)) as? UIImage {
+                DispatchQueue.main.async {
+                    self.image = image
+                }
+                
+                return
+            }
+            
             guard let data = try? Data(contentsOf: url) else {
                 return
             }
@@ -23,6 +31,7 @@ extension UIImageView {
                 return
             }
 
+            ImageCache.store(key: NSString(string: checkedUrlString), data: image)
             DispatchQueue.main.async {
                 self.image = image
             }
@@ -35,5 +44,3 @@ extension UIImageView {
         return "https://img.youtube.com/vi/\(url.lastPathComponent)/0.jpg"
     }
 }
-
-
