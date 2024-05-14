@@ -27,7 +27,7 @@ final class FeedViewController: UIViewController, FeedViewable {
         super.viewDidLoad()
         setupSubview()
         Task {
-            await presenter?.fetchAstroPod()
+            await presenter?.fetchAstroPod(startDate: Date.sevenDaysAgo, endDate: Date.today)
         }
     }
     

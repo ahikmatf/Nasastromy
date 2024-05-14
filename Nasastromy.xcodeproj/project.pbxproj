@@ -11,7 +11,6 @@
 		E95A36D32BF1E56D0010ACE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A36D22BF1E56D0010ACE1 /* SceneDelegate.swift */; };
 		E95A36DA2BF1E5700010ACE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95A36D92BF1E5700010ACE1 /* Assets.xcassets */; };
 		E95A36DD2BF1E5700010ACE1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E95A36DC2BF1E5700010ACE1 /* Base */; };
-		E95A36E82BF1E5710010ACE1 /* NasastromyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A36E72BF1E5710010ACE1 /* NasastromyTests.swift */; };
 		E95A36F22BF1E5710010ACE1 /* NasastromyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A36F12BF1E5710010ACE1 /* NasastromyUITests.swift */; };
 		E95A36F42BF1E5710010ACE1 /* NasastromyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A36F32BF1E5710010ACE1 /* NasastromyUITestsLaunchTests.swift */; };
 		E95A37052BF1E9E30010ACE1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37042BF1E9E30010ACE1 /* Router.swift */; };
@@ -25,6 +24,10 @@
 		E95A371C2BF28A020010ACE1 /* UIImageView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A371B2BF28A020010ACE1 /* UIImageView+extensions.swift */; };
 		E95A371E2BF35B0E0010ACE1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A371D2BF35B0E0010ACE1 /* DetailViewController.swift */; };
 		E95A37202BF35DE80010ACE1 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A371F2BF35DE80010ACE1 /* DetailPresenter.swift */; };
+		E95A37252BF373350010ACE1 /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37242BF373350010ACE1 /* FeedPresenterTests.swift */; };
+		E95A37282BF373BD0010ACE1 /* RouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37272BF373BD0010ACE1 /* RouterMock.swift */; };
+		E95A372A2BF374440010ACE1 /* FeedServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37292BF374440010ACE1 /* FeedServiceMock.swift */; };
+		E95A372E2BF3811D0010ACE1 /* FeedViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A372D2BF3811D0010ACE1 /* FeedViewMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +55,6 @@
 		E95A36DC2BF1E5700010ACE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E95A36DE2BF1E5700010ACE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E95A36E32BF1E5710010ACE1 /* NasastromyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasastromyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E95A36E72BF1E5710010ACE1 /* NasastromyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasastromyTests.swift; sourceTree = "<group>"; };
 		E95A36ED2BF1E5710010ACE1 /* NasastromyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasastromyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E95A36F12BF1E5710010ACE1 /* NasastromyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasastromyUITests.swift; sourceTree = "<group>"; };
 		E95A36F32BF1E5710010ACE1 /* NasastromyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasastromyUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -67,6 +69,11 @@
 		E95A371B2BF28A020010ACE1 /* UIImageView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extensions.swift"; sourceTree = "<group>"; };
 		E95A371D2BF35B0E0010ACE1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E95A371F2BF35DE80010ACE1 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		E95A37242BF373350010ACE1 /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
+		E95A37272BF373BD0010ACE1 /* RouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMock.swift; sourceTree = "<group>"; };
+		E95A37292BF374440010ACE1 /* FeedServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedServiceMock.swift; sourceTree = "<group>"; };
+		E95A372C2BF37BF80010ACE1 /* Nasastromy.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Nasastromy.xctestplan; path = ../Nasastromy.xctestplan; sourceTree = "<group>"; };
+		E95A372D2BF3811D0010ACE1 /* FeedViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +104,7 @@
 		E95A36C42BF1E56D0010ACE1 = {
 			isa = PBXGroup;
 			children = (
+				E95A372C2BF37BF80010ACE1 /* Nasastromy.xctestplan */,
 				E95A36CF2BF1E56D0010ACE1 /* Nasastromy */,
 				E95A36E62BF1E5710010ACE1 /* NasastromyTests */,
 				E95A36F02BF1E5710010ACE1 /* NasastromyUITests */,
@@ -132,7 +140,8 @@
 		E95A36E62BF1E5710010ACE1 /* NasastromyTests */ = {
 			isa = PBXGroup;
 			children = (
-				E95A36E72BF1E5710010ACE1 /* NasastromyTests.swift */,
+				E95A37262BF373B10010ACE1 /* Mocks */,
+				E95A37212BF373000010ACE1 /* Modules */,
 			);
 			path = NasastromyTests;
 			sourceTree = "<group>";
@@ -208,6 +217,40 @@
 				E95A371B2BF28A020010ACE1 /* UIImageView+extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E95A37212BF373000010ACE1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E95A37232BF373220010ACE1 /* Feed */,
+				E95A37222BF373140010ACE1 /* Detail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E95A37222BF373140010ACE1 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E95A37232BF373220010ACE1 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				E95A37242BF373350010ACE1 /* FeedPresenterTests.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		E95A37262BF373B10010ACE1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E95A37272BF373BD0010ACE1 /* RouterMock.swift */,
+				E95A37292BF374440010ACE1 /* FeedServiceMock.swift */,
+				E95A372D2BF3811D0010ACE1 /* FeedViewMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,7 +403,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E95A36E82BF1E5710010ACE1 /* NasastromyTests.swift in Sources */,
+				E95A37282BF373BD0010ACE1 /* RouterMock.swift in Sources */,
+				E95A372E2BF3811D0010ACE1 /* FeedViewMock.swift in Sources */,
+				E95A37252BF373350010ACE1 /* FeedPresenterTests.swift in Sources */,
+				E95A372A2BF374440010ACE1 /* FeedServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,7 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fatahcraftingcareer.NasastromyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -608,7 +654,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fatahcraftingcareer.NasastromyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -626,6 +672,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fatahcraftingcareer.NasastromyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -643,6 +690,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fatahcraftingcareer.NasastromyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

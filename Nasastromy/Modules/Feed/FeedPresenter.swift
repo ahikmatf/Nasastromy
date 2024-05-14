@@ -10,7 +10,7 @@ import Foundation
 protocol FeedPresentable {
     var astroPods: [AstroPod] { get }
     
-    func fetchAstroPod() async
+    func fetchAstroPod(startDate: String, endDate: String) async
     func feedCellModel(at index: Int) -> FeedCellModel
     func didSelectRow(at index: Int)
 }
@@ -27,11 +27,11 @@ final class FeedPresenter: FeedPresentable {
         self.feedService = feedService
     }
     
-    func fetchAstroPod() async {
-        let result = await feedService.fetchAstroPod(startDate: Date.sevenDaysAgo, endDate: Date.today)
+    func fetchAstroPod(startDate: String, endDate: String) async {
+        let result = await feedService.fetchAstroPod(startDate: startDate, endDate: endDate)
         switch result {
-        case .success(let astropods):
-            self.astroPods = astropods
+        case .success(let astroPods):
+            self.astroPods = astroPods
         case .failure:
             self.router.showGenericErrorAlert()
         }
