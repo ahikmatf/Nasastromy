@@ -8,13 +8,13 @@
 import UIKit
 
 final class ImageCache {
-    private var cache = NSCache<NSString, AnyObject>()
+    private static var cache = NSCache<NSString, AnyObject>()
     
-    func store(key: NSString, data: AnyObject) {
-        cache.setObject(data, forKey: key)
+    static func store(key: String, data: AnyObject) {
+        cache.setObject(data, forKey: NSString(string: key))
     }
     
-    func load(key: NSString) -> AnyObject? {
-        return cache.object(forKey: key)
+    static func load(key: String) -> AnyObject? {
+        return cache.object(forKey: NSString(string: key))
     }
 }

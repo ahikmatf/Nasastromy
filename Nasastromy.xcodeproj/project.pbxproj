@@ -39,6 +39,8 @@
 		E95A37422BF3A6300010ACE1 /* AstroPodMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37412BF3A6300010ACE1 /* AstroPodMock.swift */; };
 		E95A37452BF3B5470010ACE1 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37442BF3B5470010ACE1 /* ImageCache.swift */; };
 		E95A37482BF3C4F70010ACE1 /* ImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37472BF3C4F70010ACE1 /* ImageCacheTests.swift */; };
+		E95A374B2BF3C7710010ACE1 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A374A2BF3C7710010ACE1 /* DateExtensionTests.swift */; };
+		E95A374F2BF3CC0B0010ACE1 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A374E2BF3CC0B0010ACE1 /* ImageDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		E95A37412BF3A6300010ACE1 /* AstroPodMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPodMock.swift; sourceTree = "<group>"; };
 		E95A37442BF3B5470010ACE1 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		E95A37472BF3C4F70010ACE1 /* ImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheTests.swift; sourceTree = "<group>"; };
+		E95A374A2BF3C7710010ACE1 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
+		E95A374E2BF3CC0B0010ACE1 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 				E95A37332BF388B80010ACE1 /* App */,
 				E95A37212BF373000010ACE1 /* Modules */,
 				E95A373C2BF390BC0010ACE1 /* Network */,
+				E95A37492BF3C7230010ACE1 /* Extensions */,
 				E95A37462BF3C4E30010ACE1 /* Helper */,
 			);
 			path = NasastromyTests;
@@ -306,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				E95A37442BF3B5470010ACE1 /* ImageCache.swift */,
+				E95A374E2BF3CC0B0010ACE1 /* ImageDownloader.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -316,6 +322,14 @@
 				E95A37472BF3C4F70010ACE1 /* ImageCacheTests.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		E95A37492BF3C7230010ACE1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E95A374A2BF3C7710010ACE1 /* DateExtensionTests.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,6 +464,7 @@
 			files = (
 				E95A37452BF3B5470010ACE1 /* ImageCache.swift in Sources */,
 				E95A37052BF1E9E30010ACE1 /* Router.swift in Sources */,
+				E95A374F2BF3CC0B0010ACE1 /* ImageDownloader.swift in Sources */,
 				E95A37112BF21B210010ACE1 /* Endpoint.swift in Sources */,
 				E95A370C2BF20D340010ACE1 /* FeedService.swift in Sources */,
 				E95A37392BF38EB50010ACE1 /* DispatchQueue+extensions.swift in Sources */,
@@ -473,6 +488,7 @@
 				E95A37282BF373BD0010ACE1 /* RouterMock.swift in Sources */,
 				E95A37302BF386610010ACE1 /* DetailPresenterTest.swift in Sources */,
 				E95A372E2BF3811D0010ACE1 /* FeedViewMock.swift in Sources */,
+				E95A374B2BF3C7710010ACE1 /* DateExtensionTests.swift in Sources */,
 				E95A37482BF3C4F70010ACE1 /* ImageCacheTests.swift in Sources */,
 				E95A37422BF3A6300010ACE1 /* AstroPodMock.swift in Sources */,
 				E95A373B2BF38F180010ACE1 /* DispatchQueueMock.swift in Sources */,

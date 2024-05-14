@@ -9,32 +9,24 @@ import UIKit
 
 extension UIImageView {
     func load(from urlString: String) {
-        DispatchQueue.global(qos: .background).async {
-            let checkedUrlString = self.handleYoutubeLink(urlString: urlString)
-            guard let url = URL(string: checkedUrlString) else {
-                return
-            }
-
-            if let image = ImageCache().load(key: NSString(string: checkedUrlString)) as? UIImage {
-                DispatchQueue.main.async {
-                    self.image = image
-                }
-                
-                return
-            }
-            
-            guard let data = try? Data(contentsOf: url) else {
-                return
-            }
-
-            guard let image = UIImage(data: data) else {
-                return
-            }
-
-            ImageCache().store(key: NSString(string: checkedUrlString), data: image)
-            DispatchQueue.main.async {
-                self.image = image
-            }
+        let downloader = ImageDownloader()
+        let finalUrlString = handleYoutubeLink(urlString: urlString)
+        
+        if let image = ImageCache.load(key: finalUrlString) as? UIImage {
+            setImage(image)
+            return
+        }
+        
+        downloader.load(from: finalUrlString) { [weak self] image in
+            ImageCache.store(key: finalUrlString, data: image)
+            self?.setImage(image)
+            return
+        }
+    }
+    
+    private func setImage(_ image: UIImage) {
+        DispatchQueue.main.async {
+            self.image = image
         }
     }
     
