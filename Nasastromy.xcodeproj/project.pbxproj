@@ -23,6 +23,8 @@
 		E95A37152BF237F50010ACE1 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37142BF237F50010ACE1 /* FeedCell.swift */; };
 		E95A371A2BF289E40010ACE1 /* Date+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37192BF289E40010ACE1 /* Date+extensions.swift */; };
 		E95A371C2BF28A020010ACE1 /* UIImageView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A371B2BF28A020010ACE1 /* UIImageView+extensions.swift */; };
+		E95A371E2BF35B0E0010ACE1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A371D2BF35B0E0010ACE1 /* DetailViewController.swift */; };
+		E95A37202BF35DE80010ACE1 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A371F2BF35DE80010ACE1 /* DetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		E95A37142BF237F50010ACE1 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		E95A37192BF289E40010ACE1 /* Date+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extensions.swift"; sourceTree = "<group>"; };
 		E95A371B2BF28A020010ACE1 /* UIImageView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extensions.swift"; sourceTree = "<group>"; };
+		E95A371D2BF35B0E0010ACE1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E95A371F2BF35DE80010ACE1 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,8 @@
 		E95A37032BF1E9C40010ACE1 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				E95A371D2BF35B0E0010ACE1 /* DetailViewController.swift */,
+				E95A371F2BF35DE80010ACE1 /* DetailPresenter.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -337,12 +343,14 @@
 				E95A37052BF1E9E30010ACE1 /* Router.swift in Sources */,
 				E95A37112BF21B210010ACE1 /* Endpoint.swift in Sources */,
 				E95A370C2BF20D340010ACE1 /* FeedService.swift in Sources */,
+				E95A371E2BF35B0E0010ACE1 /* DetailViewController.swift in Sources */,
 				E95A37152BF237F50010ACE1 /* FeedCell.swift in Sources */,
 				E95A37072BF20A5D0010ACE1 /* FeedViewController.swift in Sources */,
 				E95A371A2BF289E40010ACE1 /* Date+extensions.swift in Sources */,
 				E95A36D12BF1E56D0010ACE1 /* AppDelegate.swift in Sources */,
 				E95A37092BF20A650010ACE1 /* FeedPresenter.swift in Sources */,
 				E95A370F2BF214250010ACE1 /* AstroPod.swift in Sources */,
+				E95A37202BF35DE80010ACE1 /* DetailPresenter.swift in Sources */,
 				E95A371C2BF28A020010ACE1 /* UIImageView+extensions.swift in Sources */,
 				E95A36D32BF1E56D0010ACE1 /* SceneDelegate.swift in Sources */,
 			);

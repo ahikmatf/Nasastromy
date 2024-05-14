@@ -32,6 +32,7 @@ final class FeedViewController: UIViewController, FeedViewable {
     }
     
     private func setupSubview() {
+        title = "Nasastromy"
         view.addSubview(tableView)
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -61,4 +62,8 @@ extension FeedViewController: UITableViewDataSource {
     }
 }
 
-extension FeedViewController: UITableViewDelegate {}
+extension FeedViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectRow(at: indexPath.row)
+    }
+}

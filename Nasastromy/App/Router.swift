@@ -10,6 +10,7 @@ import UIKit
 protocol Routable {
     func showRootViewController() -> UIViewController
     func showGenericErrorAlert()
+    func showDetailViewController(data: AstroPod)
 }
 
 final class Router: Routable {
@@ -37,5 +38,19 @@ final class Router: Routable {
             alert.addAction(okAction)
             self.navigationController.present(alert, animated: true)
         }
+    }
+    
+    func showDetailViewController(data: AstroPod) {
+        let presenter = DetailPresenter(detailData: data)
+        let viewController = DetailViewController(presenter: presenter)
+        
+//        let feedService = FeedService(urlSession: URLSession.shared)
+//        let presenter = FeedPresenter(router: self, feedService: feedService)
+//        let viewController = FeedViewController()
+//        viewController.presenter = presenter
+//        presenter.view = viewController
+        
+        navigationController.pushViewController(viewController, animated: true)
+        print("stack", navigationController.viewControllers)
     }
 }

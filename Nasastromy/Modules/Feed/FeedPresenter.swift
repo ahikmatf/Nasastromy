@@ -12,6 +12,7 @@ protocol FeedPresentable {
     
     func fetchAstroPod() async
     func feedCellModel(at index: Int) -> FeedCellModel
+    func didSelectRow(at index: Int)
 }
 
 final class FeedPresenter: FeedPresentable {
@@ -41,5 +42,9 @@ final class FeedPresenter: FeedPresentable {
     func feedCellModel(at index: Int) -> FeedCellModel {
         let astroPod = astroPods[index]
         return FeedCellModel(title: astroPod.title, imageUrl: astroPod.url, date: astroPod.date)
+    }
+    
+    func didSelectRow(at index: Int) {
+        router.showDetailViewController(data: astroPods[index])
     }
 }
