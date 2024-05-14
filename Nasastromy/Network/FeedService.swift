@@ -7,11 +7,6 @@
 
 import Foundation
 
-enum APIError: Error {
-    case internalServiceError
-    case endAndStartDate
-}
-
 protocol FeedServiceable {
     func fetchAstroPod(startDate: String, endDate: String) async -> Result<[AstroPod], Error>
 }
@@ -31,8 +26,8 @@ final class FeedService: FeedServiceable {
             
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-            let astropods = try decoder.decode([AstroPod].self, from: data)
-            return .success(astropods)
+            let astroPods = try decoder.decode([AstroPod].self, from: data)
+            return .success(astroPods)
         } catch {
             return .failure(error)
         }

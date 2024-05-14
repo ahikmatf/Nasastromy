@@ -29,7 +29,7 @@ final class RouterTests: XCTestCase {
     
     func test_showRootVC_returnNavCwithFeedC() {
         let sut = makeSUT()
-        let navC = sut.showRootViewController()
+        let _ = sut.showRootViewController()
         
         XCTAssertTrue(navigationController.setViewControllersInvoked)
         XCTAssertTrue(navigationController.setViewControllersVC.first is FeedViewController)

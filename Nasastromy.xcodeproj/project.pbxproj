@@ -34,6 +34,9 @@
 		E95A37372BF3892B0010ACE1 /* NavigationControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37362BF3892B0010ACE1 /* NavigationControllerMock.swift */; };
 		E95A37392BF38EB50010ACE1 /* DispatchQueue+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37382BF38EB50010ACE1 /* DispatchQueue+extensions.swift */; };
 		E95A373B2BF38F180010ACE1 /* DispatchQueueMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A373A2BF38F180010ACE1 /* DispatchQueueMock.swift */; };
+		E95A373E2BF390DD0010ACE1 /* FeedServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A373D2BF390DD0010ACE1 /* FeedServiceTests.swift */; };
+		E95A37402BF395860010ACE1 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A373F2BF395860010ACE1 /* URLProtocolMock.swift */; };
+		E95A37422BF3A6300010ACE1 /* AstroPodMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A37412BF3A6300010ACE1 /* AstroPodMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,9 @@
 		E95A37362BF3892B0010ACE1 /* NavigationControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerMock.swift; sourceTree = "<group>"; };
 		E95A37382BF38EB50010ACE1 /* DispatchQueue+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+extensions.swift"; sourceTree = "<group>"; };
 		E95A373A2BF38F180010ACE1 /* DispatchQueueMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueMock.swift; sourceTree = "<group>"; };
+		E95A373D2BF390DD0010ACE1 /* FeedServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedServiceTests.swift; sourceTree = "<group>"; };
+		E95A373F2BF395860010ACE1 /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		E95A37412BF3A6300010ACE1 /* AstroPodMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPodMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,7 @@
 				E95A37262BF373B10010ACE1 /* Mocks */,
 				E95A37332BF388B80010ACE1 /* App */,
 				E95A37212BF373000010ACE1 /* Modules */,
+				E95A373C2BF390BC0010ACE1 /* Network */,
 			);
 			path = NasastromyTests;
 			sourceTree = "<group>";
@@ -267,6 +274,8 @@
 				E95A37312BF386DE0010ACE1 /* DetailViewMock.swift */,
 				E95A37362BF3892B0010ACE1 /* NavigationControllerMock.swift */,
 				E95A373A2BF38F180010ACE1 /* DispatchQueueMock.swift */,
+				E95A373F2BF395860010ACE1 /* URLProtocolMock.swift */,
+				E95A37412BF3A6300010ACE1 /* AstroPodMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -277,6 +286,14 @@
 				E95A37342BF388CC0010ACE1 /* RouterTests.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		E95A373C2BF390BC0010ACE1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E95A373D2BF390DD0010ACE1 /* FeedServiceTests.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,12 +450,15 @@
 				E95A37282BF373BD0010ACE1 /* RouterMock.swift in Sources */,
 				E95A37302BF386610010ACE1 /* DetailPresenterTest.swift in Sources */,
 				E95A372E2BF3811D0010ACE1 /* FeedViewMock.swift in Sources */,
+				E95A37422BF3A6300010ACE1 /* AstroPodMock.swift in Sources */,
 				E95A373B2BF38F180010ACE1 /* DispatchQueueMock.swift in Sources */,
 				E95A37322BF386DE0010ACE1 /* DetailViewMock.swift in Sources */,
 				E95A37252BF373350010ACE1 /* FeedPresenterTests.swift in Sources */,
 				E95A37352BF388CC0010ACE1 /* RouterTests.swift in Sources */,
+				E95A37402BF395860010ACE1 /* URLProtocolMock.swift in Sources */,
 				E95A372A2BF374440010ACE1 /* FeedServiceMock.swift in Sources */,
 				E95A37372BF3892B0010ACE1 /* NavigationControllerMock.swift in Sources */,
+				E95A373E2BF390DD0010ACE1 /* FeedServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
