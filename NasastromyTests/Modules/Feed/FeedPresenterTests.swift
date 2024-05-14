@@ -75,12 +75,3 @@ class FeedPresenterTests: XCTestCase {
         return presenter
     }
 }
-
-
-//protocol FeedPresentable {
-//    var astroPods: [AstroPod] { get }
-//    
-//    func fetchAstroPod(startDate: String, endDate: String) async
-//    func feedCellModel(at index: Int) -> FeedCellModel
-//    func didSelectRow(at index: Int)
-//}
