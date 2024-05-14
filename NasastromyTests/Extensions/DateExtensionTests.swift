@@ -1,27 +1,30 @@
 //
-//  Date+extensions.swift
-//  Nasastromy
+//  DateExtensionTests.swift
+//  NasastromyTests
 //
 //  Created by Asep Hikmat Fatahillah on 14/05/24.
 //
 
-import Foundation
+@testable import Nasastromy
+import XCTest
 
-extension Date {
-    static var today: String {
+final class DateExtensionTests: XCTestCase {
+    func test_todaysDate_inCertainDateStringFormat() {
         let df = createDateFormatter()
         let today = Date()
-        return df.string(from: today)
+        
+        XCTAssertEqual(Date.today, df.string(from: today))
     }
     
-    static var sevenDaysAgo: String {
+    func test_sevenDaysAgoDate_inCertainDateStringFormat() {
         let df = createDateFormatter()
         let today = Date()
         let sevenDaysAgo = Calendar.current.date(byAdding: .day, value: -6, to: today)!
-        return df.string(from: sevenDaysAgo)
+        
+        XCTAssertEqual(Date.sevenDaysAgo, df.string(from: sevenDaysAgo))
     }
     
-    private static func createDateFormatter() -> DateFormatter {
+    private func createDateFormatter() -> DateFormatter {
         let df = DateFormatter()
         df.dateFormat = .localizedStringWithFormat("yyyy-MM-dd")
         df.timeZone = TimeZone(abbreviation: "GMT")
