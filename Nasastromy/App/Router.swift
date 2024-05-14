@@ -15,9 +15,11 @@ protocol Routable {
 
 final class Router: Routable {
     private let navigationController: UINavigationController
+    private let mainDispatchQueue: DispatchQueueType
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, mainDispatchQueue: DispatchQueueType = DispatchQueue.main) {
         self.navigationController = navigationController
+        self.mainDispatchQueue = mainDispatchQueue
     }
     
     func showRootViewController() -> UIViewController {
@@ -32,7 +34,7 @@ final class Router: Routable {
     }
     
     func showGenericErrorAlert() {
-        DispatchQueue.main.async {
+        mainDispatchQueue.async {
             let alert = UIAlertController(title: "Error", message: "Something went wrong", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default)
             alert.addAction(okAction)
